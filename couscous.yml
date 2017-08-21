@@ -14,12 +14,15 @@ include:
 
 menu:
     items:
-        howtogit:
-            text: "Git basics"
-            relativeUrl: howtogit.html
-        howtogerrit:
-            text: "How to Gerrit"
-            relativeUrl: howtogerrit.html
+        devguides:
+            text: "Developer guides"
+            relativeUrl: dev/index.html
+        cppguides:
+            text: "C++ guides"
+            relativeUrl: cpp/index.html
+        adminguides:
+            text: "Administrator guides"
+            relativeUrl: admin/index.html
 
 # List of directories to exclude from the processing (default contains "vendor" and "website")
 # Paths are relative to the optional include paths given when generating the website, repository root by default
@@ -31,13 +34,15 @@ exclude:
 
 # Set this variable to use a Custom Domain
 # The content of this variable will be directly inserted into the CNAME file
-cname: docs.yourdomain.com
+# cname: docs.yourdomain.com
 
 # Set the target branch in which to deploy the generated website
 branch: gh-pages
 
 # Any variable you put in this file is also available in the Twig layouts:
-title: Hello!
+title: Documentation
+
+subTitle: ""
 
 # Base URL of the published website (no "/" at the end!)
 # You are advised to set and use this variable to write your links in the HTML layouts
