@@ -9,13 +9,17 @@ template:
 # List of directories to include in the processing (by default it's empty, so all markdown files are parsed)
 # Paths are relative to the optional source path given when generating the website, repository root by default
 include:
+    - .
     - dev
 
 menu:
     items:
-        dev:
-            text: "Developer"
+        howtogit:
+            text: "Git basics"
             relativeUrl: howtogit.html
+        howtogerrit:
+            text: "How to Gerrit"
+            relativeUrl: howtogerrit.html
 
 # List of directories to exclude from the processing (default contains "vendor" and "website")
 # Paths are relative to the optional include paths given when generating the website, repository root by default
