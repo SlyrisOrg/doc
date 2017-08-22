@@ -3,6 +3,6 @@
 - Issue
 - Approach
 - Development
-- Review
+- Verification
 - Merge
 - Documentation
