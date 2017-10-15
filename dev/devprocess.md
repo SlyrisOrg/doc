@@ -1,7 +1,7 @@
 ### Development process
 
-- Issue
-- Approach
+- Identification
+- Design
 - Development
 - Verification
 - Merge
