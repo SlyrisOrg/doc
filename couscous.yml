@@ -17,15 +17,19 @@ menu:
         devguides:
             text: "Developer guides"
             relativeUrl: dev/index.html
-        cppguides:
-            text: "C++ guides"
-            relativeUrl: cpp/index.html
         adminguides:
             text: "Administrator guides"
             relativeUrl: admin/index.html
-        coreutils:
-            text: "C++: core-utils"
-            relativeUrl: core-utils/index.html
+    sections:
+        projects:
+            name: Projects
+            items:
+                core:
+                    text: "Core"
+                    relativeUrl: projects/cpp/core.html
+                spider:
+                    text: "Spider"
+                    relativeUrl: projects/cpp/spider.html
 
 # List of directories to exclude from the processing (default contains "vendor" and "website")
 # Paths are relative to the optional include paths given when generating the website, repository root by default
