@@ -1,82 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
 
-        <title>{{ title }}</title>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
 
-        <link rel="stylesheet" href="{{ baseUrl }}/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ baseUrl }}/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{ baseUrl }}/css/highlight.dark.css">
-        <link rel="stylesheet" href="{{ baseUrl }}/css/main.css">
-    </head>
-    <body>
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{github.description}}">
+  <meta name="author" content="{{ github.user }}">
 
-        <header class="navbar navbar-default navbar-fixed-top">
+  <link rel="stylesheet" href="{{ baseUrl }}/css/normalize.css">
+  <link rel="stylesheet" href="{{ baseUrl }}/css/milligram.min.css">
+  <link rel="stylesheet" href="{{ baseUrl }}/css/ovac-couscous.css">
+  <link rel="stylesheet" href="{{ baseUrl }}/css/emojifyBase.min.css">
+  <link rel="stylesheet" href="{{ baseUrl }}/css/emojify.min.css">
+  <link rel="stylesheet" href="{{ baseUrl }}/css/emojify-emoticons.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 
-            <a class="navbar-brand" href="{{ baseUrl }}/">
-                {{ title|default('The title') }}
-                <small class="hidden-xs hidden-sm">
-                    {{ subTitle|default('') }}
-                </small>
-            </a>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
 
-            {% if github is defined %}
-                <a href="https://github.com/{{ github.user }}/{{ github.repo }}">
-                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWFSSDL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav id="menu" class="panel" role="navigation">
+        <h5>Table of Contents</h5>
+        {% block menu %}
+        <ul>
+            {% for section in menu.sections %}
+                <p class="text-muted">
+                    {{ section.name }}
+                </p>
+
+                <ul class="nav nav-pills nav-stacked">
+                    {% for itemId, item in section.items %}
+                        <li class="{{ itemId == currentMenu ? 'active' }}">
+                            <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                {{ item.text|raw }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+
+            {% for itemId, item in menu.items %}
+            <li data-relative="{{item.relativeUrl}}">
+                <a
+                href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                {{ item.text|raw }}
                 </a>
-            {% endif %}
-
+            </li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </nav>
+    <div class="push">
+        <header>
+            <a href="#menu" class="menu-link">&#9776;</a>
+            <h1>{{ title }}</h1>
         </header>
+        <div class="container">
+            {% block content %}
+                {{content|raw}}
+            {% endblock %}
+        </div>
+    </div>
 
-        <main class="{{ menu ? 'container-fluid' : 'container' }}">
-            <div class="row">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{{ baseUrl }}/js/emojify.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="{{ baseUrl }}/js/bigSlide.js"></script>
+    <script src="{{ baseUrl }}/js/hide-on-scroll.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.menu-link').bigSlide({
+            'easyClose': true
+        });
+    });
+    </script>
 
-                {% if menu is defined %}
+    {% block widgets %}
+        {% if widgets.addthis %}
+            <!-- Addthis widgets. Visit https://www.addthis.com for yours-->
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ widgets.addthis }}"></script>
+        {% endif %}
 
-                    <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
+        {% if widgets.googletag %}
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer', '{{ widget.googletag }}');</script>
+        <!-- End Google Tag Manager -->
+        {% endif %}
 
-                        <ul class="nav nav-pills nav-stacked">
-                            {% for itemId, item in menu.items %}
-                                <li class="{{ itemId == currentMenu ? 'active' }}">
-                                    <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
-                                        {{ item.text|raw }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
+        {% if widgets.googleAnalytics %}
+            <!-- Google Analytics -->
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-                    </nav>
+                ga('create', '{{ googleAnalytics }}', 'auto');
+                ga('send', 'pageview');
+            </script>
+            <!-- End Google Analytics -->
+        {% endif %}
 
-                {% endif %}
+    {% endblock %}
 
-                <section id="content" class="{{ menu ? 'col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10' : 'col-sm-12' }}">
-                    {{ content|raw }}
-                </section>
-
-            </div>
-        </main>
-
-        <!-- <footer> -->
-        <!--     <div class="{{ menu ? 'container-fluid' : 'container' }}"> -->
-        <!--         <p class="text-muted"> -->
-        <!--             website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a> -->
-        <!--         </p> -->
-        <!--     </div> -->
-        <!-- </footer> -->
-
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
-
-        <script>
-            $(function() {
-                $("section>h1").wrap('<div class="page-header" />');
-                // Syntax highlighting
-                hljs.initHighlightingOnLoad();
-            });
-        </script>
-
-    </body>
+</body>
 </html>
