@@ -1,4 +1,4 @@
-### config
+### core/config
 
 **config** is a module providing platform-dependent or compiler-dependent features.
 

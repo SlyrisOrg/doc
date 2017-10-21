@@ -9,6 +9,7 @@ At the moment, **core** contains the following modules:
 
 |     Module name     |        Module description        |
 |---------------------|----------------------------------|
+| [config][0]         | Compiler/Platform detection      |
 | [lib][1]            | Shared library management        |
 | [log][2]            | Conditionnal logging             |
 | [meta][3]           | Basic metaprogramming utilities  |
@@ -17,6 +18,7 @@ At the moment, **core** contains the following modules:
 | [pp][6]             | Preprocessing utilities          |
 | [utils][7]          | Lots of tiny utilities           |
 
+[0]: http://doc.slyris.eu/projects/cpp/core/config.html
 [1]: http://doc.slyris.eu/projects/cpp/core/lib.html
 [2]: http://doc.slyris.eu/projects/cpp/core/log.html
 [3]: http://doc.slyris.eu/projects/cpp/core/meta.html

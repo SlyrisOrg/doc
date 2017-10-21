@@ -1,4 +1,4 @@
-### PP
+### core/pp
 
 **pp** provides basic preprocessing utilities.
 
