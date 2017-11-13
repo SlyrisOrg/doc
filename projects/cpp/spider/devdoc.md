@@ -11,3 +11,6 @@ This page provides documentation about the architecture and implementation detai
 ![server diagram][server-diagram]
 
 [server-diagram]: http://doc.slyris.eu/projects/cpp/spider/server-diagram.png "Server diagram"
+
+##### Architecture details
+A full page is dedicated to the architecture of the Spider project, and can be found [here](http://doc.slyris.eu/projects/cpp/spider/architecture.html)

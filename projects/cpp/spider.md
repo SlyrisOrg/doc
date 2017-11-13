@@ -4,7 +4,10 @@ The **Spider** is a client/server keylogger developed in C++.
 It is cross-platform and has been tested on Linux, OSX and Windows.
 
 ##### The client
-The client runs on an infected computer, and is responsible for recording events on it.
+The client runs on an infected computer, and is responsible for recording events on it. Note that clients might have different features depending on the platform (see the [detailed feature list][0]).
+
+[0]: http://doc.slyris.eu/projects/cpp/spider/features.html
+
 It detects keystrokes, mouse movements and clicks events using the current platform API, and converts them to a universal format.
 It can then log them locally or, if possible, send them to a remote server.
 
@@ -18,12 +21,17 @@ The server associates a unique identifier to each client and records all events 
 The server itself can be remote-controlled through a TCP connection: using a client ID, one can ask the server to send commands to a given client.
 
 ##### Client/Server communication
-The client and the server communicate through TCP, using our own [protocol][0].
+The client and the server communicate through TCP, using our own [protocol][1].
 All messages are also secured using SSL.
 
-[0]: http://doc.slyris.eu/projects/cpp/spider/protocol.html
+[1]: http://doc.slyris.eu/projects/cpp/spider/protocol.html
+
+##### User documentation
+Detailed explanations and how-to's about using the project can be found [here][2].
+
+[2]: http://doc.slyris.eu/projects/cpp/spider/userdoc.html
 
 ##### Developer documentation
-Developer documentation (which contains implementation details and diagrams) is available [here][1].
+Developer documentation (which contains implementation details and diagrams) is available [here][3].
 
-[1]: http://doc.slyris.eu/projects/cpp/spider/devdoc.html
+[3]: http://doc.slyris.eu/projects/cpp/spider/devdoc.html
