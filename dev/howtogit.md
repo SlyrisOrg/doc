@@ -19,4 +19,5 @@ We'll try to keep a few rules when it comes to committing:
 * Remember to check the coding style one last time before committing
 
 ##### How to commit ?
-The most important moment of a Git-based workflow is committing, and among the most important parts of a commit is its message. [This post](https://chris.beams.io/posts/git-commit/) discusses that topic in detail and gives a well-thought standard, which we'll use.
+The most important moment of a Git-based workflow is committing, and among the most important parts of a commit is its message.<br>
+[This post](https://chris.beams.io/posts/git-commit/) discusses that topic in detail and gives a well-thought standard, which we'll use.
