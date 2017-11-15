@@ -22,7 +22,7 @@ root@host> chown -R www-data /var/www/html/kanboard/data/
 
 Kanboard is now properly installed, and will be ready to be used after being enabled in NGinX.
 
-##### Setup the Nginx site
+##### Setting up the Nginx site
 In order to access our Kanboard site through a subdomain, we will register a site for it within Nginx with the following settings:
 
 ```

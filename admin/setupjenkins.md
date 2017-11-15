@@ -23,7 +23,7 @@ To achieve that, we need to and install an OAuth plugin for Jenkins.
 The plugin can be installed from within Jenkins, and its setup is explained [here](https://wiki.jenkins.io/display/JENKINS/GitHub+OAuth+Plugin).
 
 
-##### Setup the Nginx site
+##### Setting up the Nginx site
 In order to access our Jenkins site through a subdomain, we will create a site for it in Nginx with the following settings:
 
 ```

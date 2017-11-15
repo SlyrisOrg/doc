@@ -5,10 +5,16 @@ Gerrit is very easy to install, and has very few dependencies.
 
 We will start by installing a JDK (it contains the JRE required to run Gerrit, and will also allow building plugins if needed).
 
+Once it is done, we can download the Gerrit archive from the official source:
 ```bash
 gerrit@host> wget https://www.gerritcodereview.com/download/gerrit-2.14.1.war -O gerrit.war
 ```
-<...>
+Gerrit can then be quickly installed using the following command:
+```bash
+gerrit@host> java -jar gerrit.war init -d ~/path/to/reviewsite --batch
+```
+
+> Note that some plugins can be installed along with Gerrit using the `--install-plugin` options. See [the official documentation](https://gerrit-review.googlesource.com/Documentation/pgm-init.html) for more.
 
 ##### Installing the OAuth plugin
 The default Gerrit uses OpenID to authenticate users. We prefer using OAuth, which allows (amongst others) to login through a Github account.
@@ -42,7 +48,7 @@ After that, we can change the authentication method to OAuth in that same file a
 gerrit@host> ~/reviewsite/bin/gerrit.sh restart
 ```
 
-##### Setup the Nginx site
+##### Setting up the Nginx site
 In order to access our Gerrit site through a subdomain, we will create a site for it in Nginx with the following settings:
 
 ```

@@ -6,7 +6,7 @@ Among other things, it also helps enforcing a clean coding style.
 The secondary goal of the review is to improve everyone's programming skills.
 
 ##### How to be a good reviewer
-Reviewing efficiently is a very hard task: reading and understanding other people's is (by far) way more complicated than writing some.
+Reviewing efficiently is a very hard task: reading and understanding other people's code is (by far) way more complicated than writing some.
 Here are a few rules to follow when reviewing code:
 
 <u>Always try to understand everything</u><br>
@@ -16,11 +16,11 @@ Read the code more than once if needed. If you really don't get something, ask q
 Read the code carefully and think about what could be improved:
 Is there a better way to achieve something ? Could it be easier to read ?
 Could it be easier to maintain ? Is it flexible enough ? Can you suggest anything ?
-Make yourself a To-Do list of everything you want to check when reviewing.
+Write yourself a To-Do list of everything you want to check when reviewing.
 
 <u>Show examples</u><br>
 Review comments are short messages, and should remain that way.
-It is however a good idea to provide concrete examples or links to that illustrate your point.
+It is however a good idea to provide links to concrete examples or documents that illustrate your point.
 
 <u>Be positive</u><br>
 Review is not about criticizing people, it is about improving code quality. Make sure your remarks always remain constructive.
