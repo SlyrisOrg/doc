@@ -1,6 +1,6 @@
 ### How to Git
 
-This page could go on for hours about Git, but it would be quite useless since the Internet already contains a bunch of good tutorials about it.
+Git usage is a very wide subject, about which we could go on for hours, but it would be quite useless since the Internet already contains a bunch of good tutorials about it.
 
 ##### How does it work ?
 [This article](https://www.miximum.fr/blog/enfin-comprendre-git/) (in French) is a good introduction to Git, and yet it gives a clear overview of how it works. It can be considered a **must-read** for every (French-speaking) Git user.
