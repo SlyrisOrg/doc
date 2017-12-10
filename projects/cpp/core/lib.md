@@ -11,7 +11,7 @@ It is compatible with C and C++, provided that the loaded symbol names are not m
 It has been tested on Linux, OSX and Windows, and should seamlessly support other POSIX-compliant operating systems.
 
 ##### Example
-The example below illustrates the loading of a function from a C library called `lol` into a C++ program.
+The example below illustrates the loading of the function `double_this` from a C library called `lol` into a C++ program.
 
 ```c
 #ifdef WIN32

@@ -68,3 +68,19 @@ The inheriting class only needs to define the `<` and `=` operators.
 ##### Singleton
 The `Singleton` class can be inherited from to allow creating a unique shared instance of the inheriting class.
 The instance can be accessed through the `get` static member function, and will be created on the first request.
+
+##### Span
+The `Span` class is to array-like containers what `std::string_view` is to `std::string`, i.e. a non-owning view of a piece of array.
+It is compatible with C arrays, pointer + len couples, `std::array`, and random access iterators.
+
+It also provides iterators, which makes it compatible with the STL algorithms.
+
+```cpp
+//Non-owning view of the full vector
+std::vector<int> vec{1, 2, 3, 4, 5, 6};
+utils::Span<int> s1(vec);
+
+//Non-owning view of the first 4 elements
+std::vector<int> vec{1, 2, 3, 4, 5, 6};
+utils::Span<int> s2(vec.begin(), vec.begin() + 4);
+```
