@@ -36,7 +36,6 @@ menu:
 exclude:
     - vendor
     - page_template
-    - resources
     # This special entry will exclude directories from your ".gitignore"  file
     - %gitignore%
 
