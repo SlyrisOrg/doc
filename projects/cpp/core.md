@@ -18,14 +18,14 @@ At the moment, **core** contains the following modules:
 | [pp][6]             | Preprocessing utilities          |
 | [utils][7]          | Lots of tiny utilities           |
 
-[0]: http://doc.slyris.eu/projects/cpp/core/config.html
-[1]: http://doc.slyris.eu/projects/cpp/core/lib.html
-[2]: http://doc.slyris.eu/projects/cpp/core/log.html
-[3]: http://doc.slyris.eu/projects/cpp/core/meta.html
-[4]: http://doc.slyris.eu/projects/cpp/core/net.html
-[5]: http://doc.slyris.eu/projects/cpp/core/opt.html
-[6]: http://doc.slyris.eu/projects/cpp/core/pp.html
-[7]: http://doc.slyris.eu/projects/cpp/core/utils.html
+[0]: core/config.html
+[1]: core/lib.html
+[2]: core/log.html
+[3]: core/meta.html
+[4]: core/net.html
+[5]: core/opt.html
+[6]: core/pp.html
+[7]: core/utils.html
 
 Each module is documented on its own page, accessible through the links in the table above.
 

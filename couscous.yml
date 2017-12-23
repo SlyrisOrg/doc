@@ -30,6 +30,9 @@ menu:
                 spider:
                     text: "Spider"
                     relativeUrl: projects/cpp/spider.html
+                rtype:
+                    text: "RType"
+                    relativeUrl: projects/cpp/rtype.html
 
 # List of directories to exclude from the processing (default contains "vendor" and "website")
 # Paths are relative to the optional include paths given when generating the website, repository root by default

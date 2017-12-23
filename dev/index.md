@@ -2,8 +2,8 @@
 
 This page lists our development-related guides. They discuss the global process of developing software rather than only the code-writing part.
 
-- [Prerequisites](http://doc.slyris.eu/dev/prereq.html "Getting started")
-- [Development process](http://doc.slyris.eu/dev/devprocess.html "How is development organized ?")
-- [Git basics](http://doc.slyris.eu/dev/howtogit.html "Git basics and rules")
-- [Gerrit basics](http://doc.slyris.eu/dev/howtogerrit.html "Gerrit basics and rules")
-- [Code Review](http://doc.slyris.eu/dev/howtoreview.html "Code Review")
+- [Prerequisites](prereq.html "Getting started")
+- [Development process](devprocess.html "How is development organized ?")
+- [Git basics](howtogit.html "Git basics and rules")
+- [Gerrit basics](howtogerrit.html "Gerrit basics and rules")
+- [Code Review](howtoreview.html "Code Review")
